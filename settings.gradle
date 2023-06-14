@@ -1,8 +1,9 @@
 pluginManagement {
     repositories {
-        gradlePluginPortal()
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
+        gradlePluginPortal()
     }
 }
 dependencyResolutionManagement {
@@ -10,10 +11,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-
-        maven ("https://jitpack.io")
+        maven { url 'https://jitpack.io' }
     }
 }
-rootProject.name = "Build Utils Library"
-include ("example")
-include ("buildutils")
+rootProject.name = "Paymix Android Sdk"
+include ':paymix-opg'
+include ':example'
